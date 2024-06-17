@@ -6,19 +6,22 @@ import { appColor } from '@/theme/appColor';
 
 interface ProfileItemProps {
     name: string;
-    icon: string;
+    Icon: any;
     subName?: string;
     onPress: String
 }
 
 
 export default function ProfileItem({
-    icon, name, onPress, subName
+    Icon, name, onPress, subName
 }: ProfileItemProps) {
     return (
         <TouchableOpacity activeOpacity={0.6} style={styles.item}>
-            <AfricaText>{name}</AfricaText>
-            {subName && <AfricaText>{subName}</AfricaText>}
+            {Icon}
+            <View style={styles.view}>
+                <AfricaText>{name}</AfricaText>
+                {subName && <AfricaText style={styles.subName}>{subName}</AfricaText>}
+            </View>
         </TouchableOpacity>
     )
 }
@@ -30,6 +33,15 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         padding: 10,
         borderRadius: 12,
-        borderColor: appColor.SECONDARY_COLOR
+        borderColor: appColor.SECONDARY_COLOR,
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        alignItems: 'center'
+    },
+    view: {
+        marginLeft: 10
+    },
+    subName: {
+        fontSize: 10
     }
 })

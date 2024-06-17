@@ -24,7 +24,7 @@ export default function TabLayout() {
         options={{
           title: 'Recents',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+            <TabBarIcon name={focused ? 'stopwatch' : 'stopwatch-outline'} color={color} />
           ),
           tabBarLabel: 'Recents', // Ensure label is set correctly
         }}
@@ -34,7 +34,7 @@ export default function TabLayout() {
         options={{
           title: 'Keyboard',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <TabBarIcon name={focused ? 'grid' : 'grid-outline'} color={color} />
           ),
           tabBarLabel: 'Keyboard', // Ensure label is set correctly
         }}
